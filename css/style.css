@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 body {
 				display: flex;
 				min-height: 100vh;
 				flex-direction: column;
 				background-color: #121212;
-				font-family: 'Courier Prime', monospace;
+				font-family: 'Roboto Mono', monospace;
   
 }
 
