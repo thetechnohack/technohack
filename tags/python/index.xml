@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on The Techno Hack</title>
+    <link>https://thetechnohack.cf/tags/python/</link>
+    <description>Recent content in python on The Techno Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 04 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechnohack.cf/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Brutespray – Port Scanning and Automated Brute Forcing Tool</title>
+      <link>https://thetechnohack.cf/post/brutespray-port-scanning-and-automated-bruteforcing-tool/</link>
+      <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechnohack.cf/post/brutespray-port-scanning-and-automated-bruteforcing-tool/</guid>
+      <description>
+        
+          &lt;h1 id=&#34;brutespray&#34;&gt;BruteSpray&lt;/h1&gt;
+&lt;p&gt;BruteSpray is an open source python tool which provides a combination of both port scanning and automated brute force attacks against scanned services.&lt;/p&gt;
+&lt;p&gt;It takes the &lt;strong&gt;GNMAP/XML&lt;/strong&gt; output from an nmap scan and automatically brute forces the services running with default credentials using Medusa or use your dictionary to gain access.&lt;/p&gt;
+&lt;h1 id=&#34;github-stats&#34;&gt;GitHub Stats&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/x90skysn3k/brutespray&#34;&gt;&lt;img src=&#34;https://github-readme-stats.vercel.app/api/pin/?username=x90skysn3k&amp;amp;repo=brutespray&#34; alt=&#34;GitHub Status Card&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;installing-brutespray&#34;&gt;Installing BruteSpray&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Download the &lt;code&gt;.zip&lt;/code&gt; file from GitHub and install it manually.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Or&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Run the following command to install &lt;code&gt;brutespray&lt;/code&gt; package on Kali:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;apt install brutespray
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The following screenshot shows the output of the preceding command:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612603125/brutespray/brutespray_installation_d3zpb7.png&#34; alt=&#34;Installing brutespray&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Once it is installed, we can run the tool with the -h flag to view the list of all features and help.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;brutespray -h
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The following screenshot shows the output of the preceding command:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612603445/brutespray/brutespray_help_c4j0ey.jpg&#34; alt=&#34;BruteSpray help menu&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;how-to-do-it&#34;&gt;How to do it...&lt;/h1&gt;
+&lt;p&gt;We are doing this in 2 steps :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Scanning Target&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Brute Forcing Targeted Services&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;scanning-target-&#34;&gt;Scanning Target :&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;First of all we need a target device.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Here I&#39;m using my own virtual machine as a target (IP: 192.168.1.5)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;So, let&#39;s scan this target using nmap to find out which services are currently running.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;nmap 192.168.1.5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In the following screenshot you can see running services of the victims machine:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612603445/brutespray/nmap-services_xgqiw6.jpg&#34; alt=&#34;nmap scanning&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Now we need to save this nmap output as an &lt;ins&gt;XML or GNMAP&lt;/ins&gt; file.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We are saving the nmap output as an XML file on our desktop using the following command:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;nmap 192.168.1.5 -oX /root/Desktop/scan.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can see how this command looks alike:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612603444/brutespray/nmap-scan_iu3vag.jpg&#34; alt=&#34;Saving scan output as xml file&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Now we can see that there is a file created on our desktop as &lt;strong&gt;scan.xml&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;brute-forcing-targeted-services-&#34;&gt;Brute Forcing Targeted Services :&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To run a default brute force on all of the services that were discovered by a previously run nmap scan, we can use the following command:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;brutespray --file scan.xml --threads &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The preceding command looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612603222/brutespray/brutespray_command_e7xzts.png&#34; alt=&#34;Bruteforcing using scanned output&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To run the tool on one particular service, we can use the -s flag and
+define the service we want to perform a brute force attack on. In the
+following example, we will use the nmap scan that was done on a host
+and only check the default credentials on the FTP service:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;brutespray --file scan.xml -t &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; -s ftp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The following screenshot shows the output of the preceding
+command:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612603445/brutespray/scanning_ftp_mgmjkn.jpg&#34; alt=&#34;Bruteforcing specific services&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In the screenshot, we can see that the FTP allows anonymous
+login, which is why the tool gave a success output for the credentials that
+were shown.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can also use your custom user and password list to brute force.
+For that you have to use -U and -P flags.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;brutespray --file scan.xml -U username.txt -P passwords.txt -t &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; -s ftp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;tutorial-video&#34;&gt;Tutorial video&lt;/h1&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/C-CVLbSEe_g&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;p&gt;Practice and experiment on this tool on your own because the best ways to learn anything efficiently are – practicing and experimenting. &lt;br&gt;
+If you are learning python take a deep dive and explore how this tool actually works.&lt;/p&gt;
+
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

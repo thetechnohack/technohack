@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>google on The Techno Hack</title>
+    <link>https://thetechnohack.cf/tags/google/</link>
+    <description>Recent content in google on The Techno Hack</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 02 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechnohack.cf/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is Google Cloud Shell?</title>
+      <link>https://thetechnohack.cf/post/what-is-google-cloud-shell/</link>
+      <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechnohack.cf/post/what-is-google-cloud-shell/</guid>
+      <description>
+        
+          &lt;p&gt;If you always hesitate to install different software packages on your local system — this blog is for you.&lt;/p&gt;
+&lt;p&gt;Yes, the best solution to this problem is a cloud based environment.&lt;/p&gt;
+&lt;p&gt;The cloud computing market is pretty huge but we are going to talk about &lt;strong&gt;Google Cloud Platform(GCP)&lt;/strong&gt;, more specifically about Google Cloud Shell.&lt;/p&gt;
+&lt;p&gt;GCP is a very big deal that&#39;s why we are just focusing on cloud shell for now.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-google-cloud-shell-&#34;&gt;What is Google Cloud Shell ?&lt;/h2&gt;
+&lt;p&gt;Cloud Shell is an online development environment based on Google Cloud Platform (GCP).&lt;/p&gt;
+&lt;p&gt;It runs on a Debian-Based virtual machine, that can be accessed with any browser, it makes it easy to manage your projects and resources without having to install them on your local system.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Basic features of google cloud shell are completely free for any user with a Google account.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;cloud-shell-console&#34;&gt;Cloud Shell Console&lt;/h2&gt;
+&lt;p&gt;Cloud Shell provides you a console with two main utilities:&lt;/p&gt;
+&lt;h3 id=&#34;1-cloud-shell-terminal&#34;&gt;1. Cloud Shell Terminal&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/bADt-LplQDbOD3LLXc8nB4zC5GUjV0MCieIWXOUd7j7gaHL2uDuPuZt3kYdl_KoclG4OHTQp26k=e14-w3004&#34; alt=&#34;terminal preview&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Cloud Shell Terminal is a linux-based command-line tool for accessing your VM instances.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It supports multiple terminal sessions and full &lt;strong&gt;tmux&lt;/strong&gt; support.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It comes with tonnes of pre-installed tool &amp;amp; google cloud sdk.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You have full root privileges on your allocated VM and can even run sudo commands, if you need to.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;code&gt;TIP&lt;/code&gt;&lt;/th&gt;
+&lt;th&gt;&lt;em&gt;You can also access the terminal form GCP mobile app(no billing needed)&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;span class=&#34;nowrap&#34;&gt;&lt;span class=&#34;emojify&#34;&gt;👇&lt;/span&gt;&lt;br&gt;
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.android.apps.cloudconsole&#34;&gt;Download from playstore&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-cloud-shell-editor&#34;&gt;2. Cloud Shell Editor&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/WhS3gyjmk-B3XGdOYtPsnCN6XWkbJPNk4WiTm6wF2RjjANdXcmKjzsPf6WPnvIYlWP_emz55lMYB=e14-w3004&#34; alt=&#34;editor preview&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Cloud Shell Editor has a GUI environment where you can develop, build, debug &amp;amp; deploy your apps and projects&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It also supports some useful vscode extensions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It has an built-in git client. You can easily preview and commit to your repo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;h4 id=&#34;online-development&#34;&gt;Online development&lt;/h4&gt;
+&lt;p&gt;Access Cloud Console from any web browser. No need to do anything locally.&lt;/p&gt;
+&lt;h4 id=&#34;free-storage&#34;&gt;Free storage&lt;/h4&gt;
+&lt;p&gt;It comes with free 5GB of persistent storage as &lt;code&gt;$HOME&lt;/code&gt; directory.&lt;/p&gt;
+&lt;h4 id=&#34;pre-installed-tools&#34;&gt;Pre-installed tools&lt;/h4&gt;
+&lt;p&gt;It comes with many pre-installed tools such as python, java, mysql, nano, vim, emacs, gcloud SDK etc.&lt;/p&gt;
+&lt;h4 id=&#34;up-to-date&#34;&gt;Up-to-date&lt;/h4&gt;
+&lt;p&gt;All the pre-installed tools always stay up-to-date.&lt;/p&gt;
+&lt;h4 id=&#34;built-in-git-client&#34;&gt;Built-in git client&lt;/h4&gt;
+&lt;p&gt;Cloud Shell Editor has a built-in git client. You can manage your repository and project easily.&lt;/p&gt;
+&lt;h2 id=&#34;limitations--restrictions&#34;&gt;Limitations &amp;amp; restrictions&lt;/h2&gt;
+&lt;h4 id=&#34;custom-packages&#34;&gt;Custom packages&lt;/h4&gt;
+&lt;p&gt;You can only install custom packages in &lt;code&gt;$HOME&lt;/code&gt; directory. All the packages outside &lt;code&gt;$HOME&lt;/code&gt; directory will lost after an hour of inactivity.&lt;/p&gt;
+&lt;h4 id=&#34;vs-code-extensions&#34;&gt;VS code extensions&lt;/h4&gt;
+&lt;p&gt;You can not install any additional vs code extension on cloud shell editor but it comes with all essential extensions.&lt;/p&gt;
+&lt;h4 id=&#34;private-browsing--disabled-third-party-cookies&#34;&gt;Private browsing &amp;amp; disabled third-party cookies&lt;/h4&gt;
+&lt;p&gt;You can not use cloud console if you are using private browser or third-party cookies are disabled in your browser&lt;/p&gt;
+&lt;h4 id=&#34;coin-mining--network-scanning&#34;&gt;Coin mining &amp;amp; network scanning&lt;/h4&gt;
+&lt;p&gt;Coin mining and network scanning using Cloud Shell are strictly prohibited. If you do such things your account may be disabled forever.&lt;/p&gt;
+&lt;h4 id=&#34;weekly-usage-limit&#34;&gt;Weekly usage limit&lt;/h4&gt;
+&lt;p&gt;Cloud Shell also has a weekly usage limit. If you reach your usage limit, you&#39;ll have to wait.&lt;/p&gt;
+&lt;h4 id=&#34;cloud-shell-inactivity&#34;&gt;Cloud shell inactivity&lt;/h4&gt;
+&lt;p&gt;If you do not access Cloud Shell for 120 days, your home disk will be deleted. You will be informed with email before resetting your &lt;code&gt;$HOME&lt;/code&gt; directory.&lt;/p&gt;
+&lt;p&gt;I&#39;m also a new user of GCP and still struggling to learn its features.&lt;/p&gt;
+
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
