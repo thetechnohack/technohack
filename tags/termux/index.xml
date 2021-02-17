@@ -171,6 +171,7 @@ Mysql and mariadb have some similarities and differences.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;In this guide you installed MariaDB to act as an SQL server in android. Optionally, you also created a separate password-authenticated administrative user.&lt;/p&gt;
+&lt;br&gt;
 
         
       </description>

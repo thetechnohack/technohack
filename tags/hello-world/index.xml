@@ -26,7 +26,7 @@ If &#39;Hello, world!&#39; does not work effectively within the framework, then 
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Hello_World_Brian_Kernighan_1978.jpg/220px-Hello_World_Brian_Kernighan_1978.jpg&#34; alt=&#34;&#39;Hello, World!&#39; program by Brian Kernighan (1978)&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Though the origins of Hello World remain somewhat unclear, the tradition of using the phrase &amp;quot;Hello, world!&amp;quot; as a test message was influenced by an example program in the seminal 1978 book &lt;a href=&#34;https://archive.org/details/TheCProgrammingLanguageFirstEdition/page/n143/mode/2up&#34;&gt;The C Programming Language&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The example program in that book prints &amp;quot;Hello, world!&amp;quot;, and was inherited from a 1974 Bell Laboratories internal memorandum by &lt;strong&gt;Brian Kernighan&lt;/strong&gt;, Programming in C: A Tutorial.&lt;/p&gt;
-&lt;h2 id=&#34;hello-world-in-different-programming-languages&#34;&gt;&#39;Hello, world!&#39; in different programming languages&lt;/h2&gt;
+&lt;h2 id=&#34;hello-world--in-different-programming-languages&#34;&gt;&#39;Hello, world! &#39; in different programming languages&lt;/h2&gt;
 &lt;p&gt;Here’s what the code for Hello World looks like in some of the most popular programming languages currently in use.&lt;/p&gt;
 &lt;h3 id=&#34;python-3&#34;&gt;Python 3&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello, world!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -54,6 +54,7 @@ If &#39;Hello, world!&#39; does not work effectively within the framework, then 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With the increasing complexity of modern coding languages, Hello World is more important than ever. Both as a test and a teaching tool, it has become a standardized way of allowing programmers to configure their environment.&lt;/p&gt;
 &lt;p&gt;No one can be sure why Hello World has stood the test of time in an industry known for rapid-fire innovation, but it is here to stay.&lt;/p&gt;
 &lt;p&gt;By the way, in which program language you have written your first &#39;Hello, world!&#39; program. Mine was &lt;code&gt;helloworld.py&lt;/code&gt;.&lt;/p&gt;
+&lt;br&gt;
 
         
       </description>

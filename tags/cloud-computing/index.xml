@@ -90,6 +90,7 @@
 &lt;h4 id=&#34;cloud-shell-inactivity&#34;&gt;Cloud shell inactivity&lt;/h4&gt;
 &lt;p&gt;If you do not access Cloud Shell for 120 days, your home disk will be deleted. You will be informed with email before resetting your &lt;code&gt;$HOME&lt;/code&gt; directory.&lt;/p&gt;
 &lt;p&gt;I&#39;m also a new user of GCP and still struggling to learn its features.&lt;/p&gt;
+&lt;br&gt;
 
         
       </description>

@@ -5,7 +5,54 @@
     <link>https://thetechnohack.cf/</link>
     <description>Recent content on The Techno Hack</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechnohack.cf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechnohack.cf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Best Book to Learn Python — Free Download</title>
+      <link>https://thetechnohack.cf/post/the-best-book-to-learn-python-from-basics/</link>
+      <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechnohack.cf/post/the-best-book-to-learn-python-from-basics/</guid>
+      <description>
+        
+          &lt;h2 id=&#34;python-crash-course-2nd-edition&#34;&gt;Python Crash Course, 2nd Edition&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;According to No Starch Press :&lt;/strong&gt;
+Python Crash Course is the world’s best-selling guide to the Python programming language. This fast-paced, thorough introduction to programming with Python will have you writing programs, solving problems, and making things that work in no time.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzaiTDGEPSh0FWZekc_ptqCgGT_UuccIfFA&amp;amp;usqp=CAU&#34; alt=&#34;Python Crash Course Book&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Book :&lt;/strong&gt; Python Crash Course, 2nd Edition&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Author :&lt;/strong&gt; Eric Matthes&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pages :&lt;/strong&gt;  544&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Year :&lt;/strong&gt; May 2019&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;File format :&lt;/strong&gt; PDF&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;File size :&lt;/strong&gt;  6.7 MB&lt;/p&gt;
+&lt;h2 id=&#34;download&#34;&gt;Download&lt;/h2&gt;
+&lt;h4 id=&#34;1st-edition&#34;&gt;1st Edition&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/sumit-buddy/books/raw/main/python_crash_course_1st_edition.pdf&#34;&gt;Python Crash Course,1st Edition&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;2nd-edition&#34;&gt;2nd Edition&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/sumit-buddy/books/raw/main/python_crash_course_2nd_edition.pdf&#34;&gt;Python Crash Course, 2nd Edition&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://t.me/ComputerBuddy/70&#34;&gt;Python Crash Course, 2nd Edition (telegram)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In the first half of the book, you’ll learn basic programming concepts, such as variables, lists, classes, and loops, and practice writing clean code with exercises for each topic. You’ll also learn how to make your programs interactive and test your code safely before adding it to a project. In the second half, you’ll put your new knowledge into practice with three substantial projects: a Space Invaders–inspired arcade game, a set of data visualizations with Python’s handy libraries, and a simple web app you can deploy online.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;As you work through the book, you’ll learn how to:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Use powerful Python libraries and tools, including Pygame, Matplotlib, Plotly, and Django&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Make 2D games that respond to keypresses and mouse clicks, and that increase in difficulty&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use data to generate interactive visualizations
+Create and customize web apps and deploy them safely online&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Deal with mistakes and errors so you can solve your own programming problems&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+
+        
+      </description>
+    </item>
+    
     <item>
       <title>Brutespray – Port Scanning and Automated Brute Forcing Tool</title>
       <link>https://thetechnohack.cf/post/brutespray-port-scanning-and-automated-bruteforcing-tool/</link>
@@ -107,6 +154,7 @@ For that you have to use -U and -P flags.&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;Practice and experiment on this tool on your own because the best ways to learn anything efficiently are – practicing and experimenting. &lt;br&gt;
 If you are learning python take a deep dive and explore how this tool actually works.&lt;/p&gt;
+&lt;br&gt;
 
         
       </description>
@@ -277,6 +325,7 @@ Mysql and mariadb have some similarities and differences.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;In this guide you installed MariaDB to act as an SQL server in android. Optionally, you also created a separate password-authenticated administrative user.&lt;/p&gt;
+&lt;br&gt;
 
         
       </description>
@@ -366,6 +415,7 @@ Mysql and mariadb have some similarities and differences.&lt;/p&gt;
 &lt;h4 id=&#34;cloud-shell-inactivity&#34;&gt;Cloud shell inactivity&lt;/h4&gt;
 &lt;p&gt;If you do not access Cloud Shell for 120 days, your home disk will be deleted. You will be informed with email before resetting your &lt;code&gt;$HOME&lt;/code&gt; directory.&lt;/p&gt;
 &lt;p&gt;I&#39;m also a new user of GCP and still struggling to learn its features.&lt;/p&gt;
+&lt;br&gt;
 
         
       </description>
@@ -391,7 +441,7 @@ If &#39;Hello, world!&#39; does not work effectively within the framework, then 
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Hello_World_Brian_Kernighan_1978.jpg/220px-Hello_World_Brian_Kernighan_1978.jpg&#34; alt=&#34;&#39;Hello, World!&#39; program by Brian Kernighan (1978)&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Though the origins of Hello World remain somewhat unclear, the tradition of using the phrase &amp;quot;Hello, world!&amp;quot; as a test message was influenced by an example program in the seminal 1978 book &lt;a href=&#34;https://archive.org/details/TheCProgrammingLanguageFirstEdition/page/n143/mode/2up&#34;&gt;The C Programming Language&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The example program in that book prints &amp;quot;Hello, world!&amp;quot;, and was inherited from a 1974 Bell Laboratories internal memorandum by &lt;strong&gt;Brian Kernighan&lt;/strong&gt;, Programming in C: A Tutorial.&lt;/p&gt;
-&lt;h2 id=&#34;hello-world-in-different-programming-languages&#34;&gt;&#39;Hello, world!&#39; in different programming languages&lt;/h2&gt;
+&lt;h2 id=&#34;hello-world--in-different-programming-languages&#34;&gt;&#39;Hello, world! &#39; in different programming languages&lt;/h2&gt;
 &lt;p&gt;Here’s what the code for Hello World looks like in some of the most popular programming languages currently in use.&lt;/p&gt;
 &lt;h3 id=&#34;python-3&#34;&gt;Python 3&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello, world!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -419,6 +469,7 @@ If &#39;Hello, world!&#39; does not work effectively within the framework, then 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With the increasing complexity of modern coding languages, Hello World is more important than ever. Both as a test and a teaching tool, it has become a standardized way of allowing programmers to configure their environment.&lt;/p&gt;
 &lt;p&gt;No one can be sure why Hello World has stood the test of time in an industry known for rapid-fire innovation, but it is here to stay.&lt;/p&gt;
 &lt;p&gt;By the way, in which program language you have written your first &#39;Hello, world!&#39; program. Mine was &lt;code&gt;helloworld.py&lt;/code&gt;.&lt;/p&gt;
+&lt;br&gt;
 
         
       </description>
