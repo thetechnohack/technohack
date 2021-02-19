@@ -179,6 +179,19 @@
     
     <img src="https://res.cloudinary.com/morphy/image/upload/v1612159107/termux-mariadb/mariadb-img_o9mksp.jpg" class="image_featured">
     
+    
+    <h2>Overview</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#requirements">Requirements</a></li>
+    <li><a href="#insstep1ins-updating-packages"><ins>Step–1</ins> Updating packages</a></li>
+    <li><a href="#insstep2ins-installing-mariadb-mysql"><ins>Step–2</ins> Installing MariaDB (MySQL)</a></li>
+    <li><a href="#insstep3ins-running-and-stoping-mariabd-sessions"><ins>Step–3</ins> Running and stoping MariaBD sessions</a></li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
     <h2 id="introduction">Introduction</h2>
 <p>Generally, smartphones are not for programming but with the rapid evolution of technology the capability of smartphone is also increasing. We can do many programming stuffs on smartphone using some applications.</p>
 <p>In this blog, we are going to use a database management system in our smartphone using termux.</p>
@@ -194,7 +207,7 @@ Mysql and mariadb have some similarities and differences.</p>
 <hr>
 </details>
 <ul>
-<li>Internet connection(for package installation)</li>
+<li>Internet connection</li>
 </ul>
 <h2 id="insstep1ins-updating-packages"><ins>Step–1</ins> Updating packages</h2>
 <ul>
@@ -202,12 +215,12 @@ Mysql and mariadb have some similarities and differences.</p>
 <p>Open termux app.</p>
 </li>
 <li>
-<p>You can see a greeting screen like this:</p>
+<p>You can see a greeting screen like this :</p>
 </li>
 </ul>
 <p><img src="https://res.cloudinary.com/morphy/image/upload/v1612006811/termux-mariadb/termux-home_amfpn1.jpg" alt="termux-home-screen"></p>
 <ul>
-<li>Type <code>apt update</code> command and press enter.</li>
+<li>Run <code>apt update</code> command :</li>
 </ul>
 <p><img src="https://res.cloudinary.com/morphy/image/upload/v1611993551/termux-mariadb/apt-update-image_vmelgi.jpg" alt="apt update in action"></p>
 <ul>
@@ -215,103 +228,69 @@ Mysql and mariadb have some similarities and differences.</p>
 <p>Wait until the dollar sign appears again.</p>
 </li>
 <li>
-<p>Now type <code>apt upgrade</code> and press enter.</p>
+<p>Now run <code>apt upgrade</code> command :</p>
 </li>
 </ul>
 <p><img src="https://res.cloudinary.com/morphy/image/upload/v1611993552/termux-mariadb/apt-upgrade-image_zvjl8k.jpg" alt="apt upgrade in action"></p>
 <ul>
-<li>
-<p>It will ask you for storage permission.</p>
-</li>
-<li>
-<p>Enter y and press enter.</p>
-</li>
+<li>If it asks for storage permission type <em>y</em> and press enter :</li>
 </ul>
 <p><img src="https://res.cloudinary.com/morphy/image/upload/v1611993551/termux-mariadb/termux-image_zdn7k7.jpg" alt="giving permission"></p>
 <ul>
-<li>If this message appears:</li>
+<li>If the below prompt appears, just press enter :</li>
 </ul>
-<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612088080/termux-mariadb/termux-image-skip_idtovk.jpg" alt="permission"></p>
+<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612088080/termux-mariadb/termux-image-skip_idtovk.jpg" alt="some-extra-permission"></p>
 <ul>
-<li>
-<p>Just press enter.</p>
-</li>
-<li>
-<p>Wait for a couple of minutes.</p>
-</li>
+<li>Wait for a couple of minutes.</li>
 </ul>
 <blockquote>
-<p>Use <code>clear</code> command to clear screen.</p>
+<p>You can clear the cluttery screen using <code>clear</code> command.</p>
 </blockquote>
 <hr>
 <h2 id="insstep2ins-installing-mariadb-mysql"><ins>Step–2</ins> Installing MariaDB (MySQL)</h2>
 <ul>
-<li>Type <code>pkg install mariadb</code> and press enter.</li>
+<li>Run <code>pkg install mariadb</code> command :</li>
 </ul>
 <p><img src="https://res.cloudinary.com/morphy/image/upload/v1612008282/termux-mariadb/install-mariadb_j0bps8.jpg" alt="installing mariaDB package"></p>
 <ul>
-<li>
-<p>It will again ask you for storage permission.</p>
-</li>
-<li>
-<p>Type y and press enter.</p>
-</li>
+<li>Type <em>y</em> and press enter to give storage permission :</li>
 </ul>
 <p><img src="https://res.cloudinary.com/morphy/image/upload/v1612008593/termux-mariadb/termux-image-2_qhkags.jpg" alt="giving permission"></p>
 <ul>
 <li>Wait until the process completes.</li>
 </ul>
 <hr>
-<h2 id="insstep3ins-getting-username-whoami"><ins>Step–3</ins> Getting username (whoami)</h2>
-<ul>
-<li>Type <code>whoami</code> command and press enter.</li>
-</ul>
-<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612009572/termux-mariadb/whoami-image-1_hrgiyh.jpg" alt="whoami in action"></p>
-<ul>
-<li>
-<p>It will give you a username.</p>
-</li>
-<li>
-<p>Copy or remember that username (or id).</p>
-</li>
-</ul>
-<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612009572/termux-mariadb/whoami-image-2_t6xhdu.jpg" alt="username"></p>
-<hr>
-<h2 id="insstep4ins-running-and-stoping-mariabd-sessions"><ins>Step–4</ins> Running and stoping MariaBD sessions</h2>
+<h2 id="insstep3ins-running-and-stoping-mariabd-sessions"><ins>Step–3</ins> Running and stoping MariaBD sessions</h2>
 <blockquote>
 <p>You have to use this step every time you need to run MariaDB.</p>
 </blockquote>
 <ul>
-<li>Type the following command, just replace my username with yours.</li>
+<li>Run the following command :</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>mysqld_safe -u &lt;username here&gt;@localhost
-</code></pre></div><p><img src="https://res.cloudinary.com/morphy/image/upload/v1612010517/termux-mariadb/mariadb-start-cmd_ntuuqo.jpg" alt="starting-mariadb"></p>
-<ul>
-<li>Then your screen will look like this:</li>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>mysqld_safe -u <span class="k">$(</span>whoami<span class="k">)</span>@localhost
+</code></pre></div><ul>
+<li>Then your screen will look like this :</li>
 </ul>
 <p><img src="https://res.cloudinary.com/morphy/image/upload/v1612011419/termux-mariadb/mariadb-start-cmd-2_gz3fhw.jpg" alt="starting-mariadb"></p>
 <ul>
-<li>Press <code>ctrl+z</code> (alternatively you can open another session.)</li>
+<li>Now, press <code>ctrl+z</code> ( or open a new session)</li>
 </ul>
 <p><img src="https://res.cloudinary.com/morphy/image/upload/v1612011395/termux-mariadb/mariadb-start-cmd-3_xp3iqs.jpg" alt="starting-mariadb"></p>
 <ul>
-<li>
-<p>Then type <code>mariadb</code> to start mariadb.</p>
-</li>
-<li>
-<p>Great! mariadb is running now.</p>
-</li>
+<li>Now run <code>mariadb</code> or <code>mysql</code> to start mariadb :</li>
 </ul>
 <p><img src="https://res.cloudinary.com/morphy/image/upload/v1612012273/termux-mariadb/mariadb-home_rigrwh.jpg" alt="mariadb home screen"></p>
+<p>Do whatever you want with MariaDB, now.
+Create databases, tables or connect it with python for your projects.</p>
 <ul>
 <li>
-<p>To exit mariadb, press <code>ctrl+z</code> or type exit</p>
+<p>To exit mariadb, type <em>exit</em> or <em>quit</em></p>
 </li>
 <li>
 <p>After exiting MariaDB dont forget to kill the background session completely using the below command (you can also kill sessions using pid's):</p>
 </li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>killall -u &lt;username here&gt;
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>killall -u <span class="k">$(</span>whoami<span class="k">)</span>
 </code></pre></div><p><img src="https://res.cloudinary.com/morphy/image/upload/v1612012839/termux-mariadb/mariadb-kill_jphgix.jpg" alt="killall command in action"></p>
 <h2 id="summary">Summary</h2>
 <ul>
@@ -322,17 +301,22 @@ Mysql and mariadb have some similarities and differences.</p>
 <p>Install mariadb package using <code>pkg install mariadb</code></p>
 </li>
 <li>
-<p>Start mariadb socket using <code>mysqld_safe -u &lt;username&gt;@localhost</code></p>
+<p>Start mariadb socket using <code>mysqld_safe -u $(whoami)@localhost</code></p>
 </li>
 <li>
-<p>Run mariadb using <code>mariadb</code> command</p>
+<p>Run mariadb using <code>mariadb</code>  or <code>mysql</code> command</p>
 </li>
 <li>
-<p>Exit mariadb and then kill all background processes using <code>killall -u &lt;username&gt;</code></p>
+<p>Exit mariadb and then kill all background processes using <code>killall -u $(whoami)</code></p>
 </li>
 </ul>
 <blockquote>
-<p>If you are very lazy to type this long commands you can define some aliases in bash.bashrc file.</p>
+<p>Optionally, you can also define aliases for this commands in bash.bashrc file like this:</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span><span class="nb">alias</span> <span class="nv">run</span><span class="o">=</span><span class="s1">&#39;mysqld_safe -u $(whoami)@localhost&#39;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span><span class="nb">alias</span> <span class="nv">stop</span><span class="o">=</span><span class="s1">&#39;killall -u $(whoami)&#39;</span>
+</code></pre></div><blockquote>
+<p>After that you just need to type run, mysql &amp; stop commands instead of those long commands.</p>
 </blockquote>
 <h2 id="conclusion">Conclusion</h2>
 <p>In this guide you installed MariaDB to act as an SQL server in android. Optionally, you also created a separate password-authenticated administrative user.</p>
