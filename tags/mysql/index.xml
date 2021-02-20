@@ -14,12 +14,7 @@
       <guid>https://thetechnohack.cf/post/how-to-install-mysql-on-android-with-termux/</guid>
       <description>
         
-          &lt;style&gt;
-img[src$=&#34;#image&#34;] {
-  border-radius: 10px;
-}
-&lt;/style&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+          &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Generally, smartphones are not for programming but with the rapid evolution of technology the capability of smartphone is also increasing. We can do many programming stuffs on smartphone using some applications.&lt;/p&gt;
 &lt;p&gt;In this blog, we are going to use a database management system in our smartphone using termux.&lt;/p&gt;
 &lt;p&gt;We cannot run Mysql effeciently on smartphone but alternatively we can use MariaDB as our database management system.
@@ -124,6 +119,11 @@ Mysql and mariadb have some similarities and differences.&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;In this guide you installed MariaDB to act as an SQL server in android. Optionally, you also created a separate password-authenticated administrative user.&lt;/p&gt;
 &lt;br&gt;
+&lt;style&gt;
+img[src$=&#34;#image&#34;] {
+  border-radius: 10px;
+}
+&lt;/style&gt;
 
         
       </description>
