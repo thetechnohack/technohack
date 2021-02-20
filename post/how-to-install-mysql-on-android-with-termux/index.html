@@ -177,7 +177,7 @@
   </div>
 
     
-    <img src="https://res.cloudinary.com/morphy/image/upload/v1612159107/termux-mariadb/mariadb-img_o9mksp.jpg" class="image_featured">
+    <img src="https://res.cloudinary.com/morphy/image/upload/v1612159107/termux-mariadb/mariadb-img_o9mksp.jpg#image" class="image_featured">
     
     
     <h2>Overview</h2>
@@ -187,12 +187,18 @@
     <li><a href="#requirements">Requirements</a></li>
     <li><a href="#insstep1ins-updating-packages"><ins>Step–1</ins> Updating packages</a></li>
     <li><a href="#insstep2ins-installing-mariadb-mysql"><ins>Step–2</ins> Installing MariaDB (MySQL)</a></li>
-    <li><a href="#insstep3ins-running-and-stoping-mariabd-sessions"><ins>Step–3</ins> Running and stoping MariaBD sessions</a></li>
+    <li><a href="#insstep3ins-runningstoping-mariadb-sessions"><ins>Step–3</ins> Running/Stoping MariaDB sessions</a></li>
     <li><a href="#summary">Summary</a></li>
+    <li><a href="#do-it-using-aliases">Do it using aliases</a></li>
     <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
-    <h2 id="introduction">Introduction</h2>
+    <style>
+img[src$="#image"] {
+  border-radius: 10px;
+}
+</style>
+<h2 id="introduction">Introduction</h2>
 <p>Generally, smartphones are not for programming but with the rapid evolution of technology the capability of smartphone is also increasing. We can do many programming stuffs on smartphone using some applications.</p>
 <p>In this blog, we are going to use a database management system in our smartphone using termux.</p>
 <p>We cannot run Mysql effeciently on smartphone but alternatively we can use MariaDB as our database management system.
@@ -201,123 +207,99 @@ Mysql and mariadb have some similarities and differences.</p>
 <p>This tutorial will explain how to install SQL(MariaDB) or MySQL command line Android.</p>
 <p>This is a very beginner friendly guide with explanary images.</p>
 <h2 id="requirements">Requirements</h2>
-<details markdown='1'><summary>Download Termux App [click to expand]</summary>
-<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612001129/termux-mariadb/termux-playstore_x1cy5h.jpg" alt="termux on playstore"></p>
-<p><a href="https://play.google.com/store/apps/details?id=com.termux">Download Termux App</a></p>
-<hr>
-</details>
 <ul>
-<li>Internet connection</li>
+<li>
+<p>Install Termux app (<a href="https://play.google.com/store/apps/details?id=com.termux">CLICK HERE</a>)</p>
+</li>
+<li>
+<p>Internet connection</p>
+</li>
 </ul>
 <h2 id="insstep1ins-updating-packages"><ins>Step–1</ins> Updating packages</h2>
-<ul>
-<li>
-<p>Open termux app.</p>
-</li>
-<li>
-<p>You can see a greeting screen like this :</p>
-</li>
-</ul>
-<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612006811/termux-mariadb/termux-home_amfpn1.jpg" alt="termux-home-screen"></p>
-<ul>
-<li>Run <code>apt update</code> command :</li>
-</ul>
-<p><img src="https://res.cloudinary.com/morphy/image/upload/v1611993551/termux-mariadb/apt-update-image_vmelgi.jpg" alt="apt update in action"></p>
-<ul>
-<li>
-<p>Wait until the dollar sign appears again.</p>
-</li>
-<li>
-<p>Now run <code>apt upgrade</code> command :</p>
-</li>
-</ul>
-<p><img src="https://res.cloudinary.com/morphy/image/upload/v1611993552/termux-mariadb/apt-upgrade-image_zvjl8k.jpg" alt="apt upgrade in action"></p>
-<ul>
-<li>If it asks for storage permission type <em>y</em> and press enter :</li>
-</ul>
-<p><img src="https://res.cloudinary.com/morphy/image/upload/v1611993551/termux-mariadb/termux-image_zdn7k7.jpg" alt="giving permission"></p>
-<ul>
-<li>If the below prompt appears, just press enter :</li>
-</ul>
-<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612088080/termux-mariadb/termux-image-skip_idtovk.jpg" alt="some-extra-permission"></p>
-<ul>
-<li>Wait for a couple of minutes.</li>
-</ul>
+<p>Okay, so you have installed termux, what next?</p>
+<p>Launch termux and this is how termux looks like :</p>
+<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612006811/termux-mariadb/termux-home_amfpn1.jpg#image" alt="termux-home-screen"></p>
+<p>Now we need to update its initial packages with the following apt command :</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>apt update &amp;&amp; apt upgrade
+</code></pre></div><p>In between the updating process if it asks for storage permission or some other permission—just press <em>Y</em> or simply press enter to use defaults.</p>
 <blockquote>
 <p>You can clear the cluttery screen using <code>clear</code> command.</p>
 </blockquote>
 <hr>
 <h2 id="insstep2ins-installing-mariadb-mysql"><ins>Step–2</ins> Installing MariaDB (MySQL)</h2>
 <ul>
-<li>Run <code>pkg install mariadb</code> command :</li>
+<li>Run the following command to install mariadb package :</li>
 </ul>
-<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612008282/termux-mariadb/install-mariadb_j0bps8.jpg" alt="installing mariaDB package"></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>pkg install mariadb
+</code></pre></div><p><img src="https://res.cloudinary.com/morphy/image/upload/v1612008282/termux-mariadb/install-mariadb_j0bps8.jpg#image" alt="installing-mariadb-package"></p>
 <ul>
-<li>Type <em>y</em> and press enter to give storage permission :</li>
+<li>Type <em>Y</em> and press enter to give storage permission :</li>
 </ul>
-<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612008593/termux-mariadb/termux-image-2_qhkags.jpg" alt="giving permission"></p>
+<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612008593/termux-mariadb/termux-image-2_qhkags.jpg#image" alt="giving-storage-permission"></p>
 <ul>
 <li>Wait until the process completes.</li>
 </ul>
 <hr>
-<h2 id="insstep3ins-running-and-stoping-mariabd-sessions"><ins>Step–3</ins> Running and stoping MariaBD sessions</h2>
+<h2 id="insstep3ins-runningstoping-mariadb-sessions"><ins>Step–3</ins> Running/Stoping MariaDB sessions</h2>
 <blockquote>
 <p>You have to use this step every time you need to run MariaDB.</p>
 </blockquote>
 <ul>
-<li>Run the following command :</li>
+<li>Run the following command to start mariadb daemon :</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>mysqld_safe -u <span class="k">$(</span>whoami<span class="k">)</span>@localhost
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>mysqld_safe -u $(whoami)@localhost
 </code></pre></div><ul>
-<li>Then your screen will look like this :</li>
+<li>After that your screen will look like this, which means mariadb daemon started successfully :</li>
 </ul>
-<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612011419/termux-mariadb/mariadb-start-cmd-2_gz3fhw.jpg" alt="starting-mariadb"></p>
+<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612011419/termux-mariadb/mariadb-start-cmd-2_gz3fhw.jpg#image" alt="starting-mariadb-daemon"></p>
 <ul>
-<li>Now, press <code>ctrl+z</code> ( or open a new session)</li>
+<li>
+<p>Then, press <code>ctrl+z</code> or <ins>open a new session</ins> (it means the process will run in background)</p>
+</li>
+<li>
+<p>Then, run <code>mariadb</code> or <code>mysql</code> command to start mariadb-cli :</p>
+</li>
 </ul>
-<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612011395/termux-mariadb/mariadb-start-cmd-3_xp3iqs.jpg" alt="starting-mariadb"></p>
-<ul>
-<li>Now run <code>mariadb</code> or <code>mysql</code> to start mariadb :</li>
-</ul>
-<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612012273/termux-mariadb/mariadb-home_rigrwh.jpg" alt="mariadb home screen"></p>
-<p>Do whatever you want with MariaDB, now.
-Create databases, tables or connect it with python for your projects.</p>
+<p><img src="https://res.cloudinary.com/morphy/image/upload/v1612012273/termux-mariadb/mariadb-home_rigrwh.jpg#image" alt="mariadb-home-screen"></p>
+<p>After running mariadb-cli, do whatever you want — create databases, tables or connect it with python for your projects.</p>
 <ul>
 <li>
 <p>To exit mariadb, type <em>exit</em> or <em>quit</em></p>
 </li>
 <li>
-<p>After exiting MariaDB dont forget to kill the background session completely using the below command (you can also kill sessions using pid's):</p>
+<p>After exiting MariaDB dont forget to kill the background process completely using the below command (you can also kill sessions using pid's) :</p>
 </li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>killall -u <span class="k">$(</span>whoami<span class="k">)</span>
-</code></pre></div><p><img src="https://res.cloudinary.com/morphy/image/upload/v1612012839/termux-mariadb/mariadb-kill_jphgix.jpg" alt="killall command in action"></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>killall -u $(whoami)
+</code></pre></div><hr>
 <h2 id="summary">Summary</h2>
 <ul>
-<li>
-<p>Update and upgrade packages using <code>apt update</code> &amp; <code>apt upgrade</code></p>
-</li>
-<li>
-<p>Install mariadb package using <code>pkg install mariadb</code></p>
-</li>
-<li>
-<p>Start mariadb socket using <code>mysqld_safe -u $(whoami)@localhost</code></p>
-</li>
-<li>
-<p>Run mariadb using <code>mariadb</code>  or <code>mysql</code> command</p>
-</li>
-<li>
-<p>Exit mariadb and then kill all background processes using <code>killall -u $(whoami)</code></p>
-</li>
+<li>Update packages using the below command :</li>
 </ul>
-<blockquote>
-<p>Optionally, you can also define aliases for this commands in bash.bashrc file like this:</p>
-</blockquote>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span><span class="nb">alias</span> <span class="nv">run</span><span class="o">=</span><span class="s1">&#39;mysqld_safe -u $(whoami)@localhost&#39;</span>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>apt update &amp;&amp; apt upgrade
+</code></pre></div><ul>
+<li>Install mariadb package using :</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>pkg install mariadb
+</code></pre></div><ul>
+<li>Start mariadb daemon using :</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>mysqld_safe -u $(whoami)@localhost
+</code></pre></div><ul>
+<li>Run mariadb using :</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>mariadb
+</code></pre></div><p>Or</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>mysql
+</code></pre></div><ul>
+<li>Exit mariadb and then kill all background processes (daemons) using :</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>killall -u $(whoami)
+</code></pre></div><h2 id="do-it-using-aliases">Do it using aliases</h2>
+<p>Optionally, you can also define aliases for above commands in <em>bash.bashrc</em> file like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span><span class="nb">alias</span> <span class="nv">run</span><span class="o">=</span><span class="s1">&#39;mysqld_safe -u $(whoami)@localhost &amp;&#39;</span>
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span><span class="nb">alias</span> <span class="nv">stop</span><span class="o">=</span><span class="s1">&#39;killall -u $(whoami)&#39;</span>
-</code></pre></div><blockquote>
-<p>After that you just need to type run, mysql &amp; stop commands instead of those long commands.</p>
-</blockquote>
+</code></pre></div><p>You don't need to write those long commands every time after using aliases. You just need to type <ins>run, mysql &amp; stop</ins> commands instead.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>In this guide you installed MariaDB to act as an SQL server in android. Optionally, you also created a separate password-authenticated administrative user.</p>
 <br>

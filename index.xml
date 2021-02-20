@@ -168,7 +168,12 @@ If you are learning python take a deep dive and explore how this tool actually w
       <guid>https://thetechnohack.cf/post/how-to-install-mysql-on-android-with-termux/</guid>
       <description>
         
-          &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+          &lt;style&gt;
+img[src$=&#34;#image&#34;] {
+  border-radius: 10px;
+}
+&lt;/style&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Generally, smartphones are not for programming but with the rapid evolution of technology the capability of smartphone is also increasing. We can do many programming stuffs on smartphone using some applications.&lt;/p&gt;
 &lt;p&gt;In this blog, we are going to use a database management system in our smartphone using termux.&lt;/p&gt;
 &lt;p&gt;We cannot run Mysql effeciently on smartphone but alternatively we can use MariaDB as our database management system.
@@ -177,123 +182,99 @@ Mysql and mariadb have some similarities and differences.&lt;/p&gt;
 &lt;p&gt;This tutorial will explain how to install SQL(MariaDB) or MySQL command line Android.&lt;/p&gt;
 &lt;p&gt;This is a very beginner friendly guide with explanary images.&lt;/p&gt;
 &lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
-&lt;details markdown=&#39;1&#39;&gt;&lt;summary&gt;Download Termux App [click to expand]&lt;/summary&gt;
-&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612001129/termux-mariadb/termux-playstore_x1cy5h.jpg&#34; alt=&#34;termux on playstore&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.termux&#34;&gt;Download Termux App&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;/details&gt;
 &lt;ul&gt;
-&lt;li&gt;Internet connection&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install Termux app (&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.termux&#34;&gt;CLICK HERE&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Internet connection&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;insstep1ins-updating-packages&#34;&gt;&lt;ins&gt;Step–1&lt;/ins&gt; Updating packages&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Open termux app.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;You can see a greeting screen like this :&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612006811/termux-mariadb/termux-home_amfpn1.jpg&#34; alt=&#34;termux-home-screen&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Run &lt;code&gt;apt update&lt;/code&gt; command :&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1611993551/termux-mariadb/apt-update-image_vmelgi.jpg&#34; alt=&#34;apt update in action&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Wait until the dollar sign appears again.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Now run &lt;code&gt;apt upgrade&lt;/code&gt; command :&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1611993552/termux-mariadb/apt-upgrade-image_zvjl8k.jpg&#34; alt=&#34;apt upgrade in action&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;If it asks for storage permission type &lt;em&gt;y&lt;/em&gt; and press enter :&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1611993551/termux-mariadb/termux-image_zdn7k7.jpg&#34; alt=&#34;giving permission&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;If the below prompt appears, just press enter :&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612088080/termux-mariadb/termux-image-skip_idtovk.jpg&#34; alt=&#34;some-extra-permission&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Wait for a couple of minutes.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Okay, so you have installed termux, what next?&lt;/p&gt;
+&lt;p&gt;Launch termux and this is how termux looks like :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612006811/termux-mariadb/termux-home_amfpn1.jpg#image&#34; alt=&#34;termux-home-screen&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now we need to update its initial packages with the following apt command :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;apt update &amp;amp;&amp;amp; apt upgrade
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In between the updating process if it asks for storage permission or some other permission—just press &lt;em&gt;Y&lt;/em&gt; or simply press enter to use defaults.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You can clear the cluttery screen using &lt;code&gt;clear&lt;/code&gt; command.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;insstep2ins-installing-mariadb-mysql&#34;&gt;&lt;ins&gt;Step–2&lt;/ins&gt; Installing MariaDB (MySQL)&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Run &lt;code&gt;pkg install mariadb&lt;/code&gt; command :&lt;/li&gt;
+&lt;li&gt;Run the following command to install mariadb package :&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612008282/termux-mariadb/install-mariadb_j0bps8.jpg&#34; alt=&#34;installing mariaDB package&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;pkg install mariadb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612008282/termux-mariadb/install-mariadb_j0bps8.jpg#image&#34; alt=&#34;installing-mariadb-package&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Type &lt;em&gt;y&lt;/em&gt; and press enter to give storage permission :&lt;/li&gt;
+&lt;li&gt;Type &lt;em&gt;Y&lt;/em&gt; and press enter to give storage permission :&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612008593/termux-mariadb/termux-image-2_qhkags.jpg&#34; alt=&#34;giving permission&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612008593/termux-mariadb/termux-image-2_qhkags.jpg#image&#34; alt=&#34;giving-storage-permission&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Wait until the process completes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;insstep3ins-running-and-stoping-mariabd-sessions&#34;&gt;&lt;ins&gt;Step–3&lt;/ins&gt; Running and stoping MariaBD sessions&lt;/h2&gt;
+&lt;h2 id=&#34;insstep3ins-runningstoping-mariadb-sessions&#34;&gt;&lt;ins&gt;Step–3&lt;/ins&gt; Running/Stoping MariaDB sessions&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You have to use this step every time you need to run MariaDB.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;Run the following command :&lt;/li&gt;
+&lt;li&gt;Run the following command to start mariadb daemon :&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;mysqld_safe -u &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;whoami&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;@localhost
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;mysqld_safe -u $(whoami)@localhost
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;Then your screen will look like this :&lt;/li&gt;
+&lt;li&gt;After that your screen will look like this, which means mariadb daemon started successfully :&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612011419/termux-mariadb/mariadb-start-cmd-2_gz3fhw.jpg&#34; alt=&#34;starting-mariadb&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612011419/termux-mariadb/mariadb-start-cmd-2_gz3fhw.jpg#image&#34; alt=&#34;starting-mariadb-daemon&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Now, press &lt;code&gt;ctrl+z&lt;/code&gt; ( or open a new session)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then, press &lt;code&gt;ctrl+z&lt;/code&gt; or &lt;ins&gt;open a new session&lt;/ins&gt; (it means the process will run in background)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Then, run &lt;code&gt;mariadb&lt;/code&gt; or &lt;code&gt;mysql&lt;/code&gt; command to start mariadb-cli :&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612011395/termux-mariadb/mariadb-start-cmd-3_xp3iqs.jpg&#34; alt=&#34;starting-mariadb&#34;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Now run &lt;code&gt;mariadb&lt;/code&gt; or &lt;code&gt;mysql&lt;/code&gt; to start mariadb :&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612012273/termux-mariadb/mariadb-home_rigrwh.jpg&#34; alt=&#34;mariadb home screen&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Do whatever you want with MariaDB, now.
-Create databases, tables or connect it with python for your projects.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612012273/termux-mariadb/mariadb-home_rigrwh.jpg#image&#34; alt=&#34;mariadb-home-screen&#34;&gt;&lt;/p&gt;
+&lt;p&gt;After running mariadb-cli, do whatever you want — create databases, tables or connect it with python for your projects.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;To exit mariadb, type &lt;em&gt;exit&lt;/em&gt; or &lt;em&gt;quit&lt;/em&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;After exiting MariaDB dont forget to kill the background session completely using the below command (you can also kill sessions using pid&#39;s):&lt;/p&gt;
+&lt;p&gt;After exiting MariaDB dont forget to kill the background process completely using the below command (you can also kill sessions using pid&#39;s) :&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;killall -u &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;whoami&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612012839/termux-mariadb/mariadb-kill_jphgix.jpg&#34; alt=&#34;killall command in action&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;killall -u $(whoami)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Update and upgrade packages using &lt;code&gt;apt update&lt;/code&gt; &amp;amp; &lt;code&gt;apt upgrade&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Install mariadb package using &lt;code&gt;pkg install mariadb&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Start mariadb socket using &lt;code&gt;mysqld_safe -u $(whoami)@localhost&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Run mariadb using &lt;code&gt;mariadb&lt;/code&gt;  or &lt;code&gt;mysql&lt;/code&gt; command&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Exit mariadb and then kill all background processes using &lt;code&gt;killall -u $(whoami)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Update packages using the below command :&lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Optionally, you can also define aliases for this commands in bash.bashrc file like this:&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mysqld_safe -u $(whoami)@localhost&amp;#39;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;apt update &amp;amp;&amp;amp; apt upgrade
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Install mariadb package using :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;pkg install mariadb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Start mariadb daemon using :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;mysqld_safe -u $(whoami)@localhost
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Run mariadb using :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;mariadb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Or&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Exit mariadb and then kill all background processes (daemons) using :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;killall -u $(whoami)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;do-it-using-aliases&#34;&gt;Do it using aliases&lt;/h2&gt;
+&lt;p&gt;Optionally, you can also define aliases for above commands in &lt;em&gt;bash.bashrc&lt;/em&gt; file like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mysqld_safe -u $(whoami)@localhost &amp;amp;&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;stop&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;killall -u $(whoami)&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;After that you just need to type run, mysql &amp;amp; stop commands instead of those long commands.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You don&#39;t need to write those long commands every time after using aliases. You just need to type &lt;ins&gt;run, mysql &amp;amp; stop&lt;/ins&gt; commands instead.&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;In this guide you installed MariaDB to act as an SQL server in android. Optionally, you also created a separate password-authenticated administrative user.&lt;/p&gt;
 &lt;br&gt;
