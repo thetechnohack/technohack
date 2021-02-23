@@ -4,7 +4,42 @@
   
   <url>
     <loc>https://thetechnohack.cf/</loc>
-    <lastmod>2021-02-17T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thetechnohack.cf/tags/cybersecurity/</loc>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thetechnohack.cf/tags/hackers/</loc>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thetechnohack.cf/tags/hacking/</loc>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thetechnohack.cf/post/hacking-social-engineer-and-types-of-hackers/</loc>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thetechnohack.cf/post/</loc>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thetechnohack.cf/tags/security/</loc>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thetechnohack.cf/tags/</loc>
+    <lastmod>2021-02-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -23,17 +58,7 @@
   </url>
   
   <url>
-    <loc>https://thetechnohack.cf/post/</loc>
-    <lastmod>2021-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://thetechnohack.cf/tags/python/</loc>
-    <lastmod>2021-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thetechnohack.cf/tags/</loc>
     <lastmod>2021-02-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -49,11 +74,6 @@
   
   <url>
     <loc>https://thetechnohack.cf/post/brutespray-port-scanning-and-automated-bruteforcing-tool/</loc>
-    <lastmod>2021-02-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thetechnohack.cf/tags/hacking/</loc>
     <lastmod>2021-02-04T00:00:00+00:00</lastmod>
   </url>
   
