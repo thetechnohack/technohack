@@ -189,7 +189,9 @@ Mysql and mariadb have some similarities and differences.&lt;/p&gt;
 &lt;p&gt;Okay, so you have installed termux, what next?&lt;/p&gt;
 &lt;p&gt;Launch termux and this is how termux looks like :&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/morphy/image/upload/v1612006811/termux-mariadb/termux-home_amfpn1.jpg#image&#34; alt=&#34;termux-home-screen&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Now we need to update its initial packages with the following apt command :&lt;/p&gt;
+&lt;p&gt;First thing you need to do is to allow termux to use device disk storage. To do that run the following command and press allow :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;termux-setup-storage
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now we need to update its initial packages with the following apt command :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;apt update &amp;amp;&amp;amp; apt upgrade
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In between the updating process if it asks for storage permission or some other permission—just press &lt;em&gt;Y&lt;/em&gt; or simply press enter to use defaults.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -210,7 +212,7 @@ Mysql and mariadb have some similarities and differences.&lt;/p&gt;
 &lt;li&gt;Wait until the process completes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;insstep3ins-runningstoping-mariadb-sessions&#34;&gt;&lt;ins&gt;Step–3&lt;/ins&gt; Running/Stoping MariaDB sessions&lt;/h2&gt;
+&lt;h2 id=&#34;insstep3ins-runningstopping-mariadb-sessions&#34;&gt;&lt;ins&gt;Step–3&lt;/ins&gt; Running/Stopping MariaDB sessions&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You have to use this step every time you need to run MariaDB.&lt;/p&gt;
 &lt;/blockquote&gt;

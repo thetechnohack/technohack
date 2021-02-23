@@ -187,7 +187,7 @@
     <li><a href="#requirements">Requirements</a></li>
     <li><a href="#insstep1ins-updating-packages"><ins>Step–1</ins> Updating packages</a></li>
     <li><a href="#insstep2ins-installing-mariadb-mysql"><ins>Step–2</ins> Installing MariaDB (MySQL)</a></li>
-    <li><a href="#insstep3ins-runningstoping-mariadb-sessions"><ins>Step–3</ins> Running/Stoping MariaDB sessions</a></li>
+    <li><a href="#insstep3ins-runningstopping-mariadb-sessions"><ins>Step–3</ins> Running/Stopping MariaDB sessions</a></li>
     <li><a href="#summary">Summary</a></li>
     <li><a href="#do-it-using-aliases">Do it using aliases</a></li>
     <li><a href="#conclusion">Conclusion</a></li>
@@ -214,7 +214,9 @@ Mysql and mariadb have some similarities and differences.</p>
 <p>Okay, so you have installed termux, what next?</p>
 <p>Launch termux and this is how termux looks like :</p>
 <p><img src="https://res.cloudinary.com/morphy/image/upload/v1612006811/termux-mariadb/termux-home_amfpn1.jpg#image" alt="termux-home-screen"></p>
-<p>Now we need to update its initial packages with the following apt command :</p>
+<p>First thing you need to do is to allow termux to use device disk storage. To do that run the following command and press allow :</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>termux-setup-storage
+</code></pre></div><p>Now we need to update its initial packages with the following apt command :</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>apt update &amp;&amp; apt upgrade
 </code></pre></div><p>In between the updating process if it asks for storage permission or some other permission—just press <em>Y</em> or simply press enter to use defaults.</p>
 <blockquote>
@@ -235,7 +237,7 @@ Mysql and mariadb have some similarities and differences.</p>
 <li>Wait until the process completes.</li>
 </ul>
 <hr>
-<h2 id="insstep3ins-runningstoping-mariadb-sessions"><ins>Step–3</ins> Running/Stoping MariaDB sessions</h2>
+<h2 id="insstep3ins-runningstopping-mariadb-sessions"><ins>Step–3</ins> Running/Stopping MariaDB sessions</h2>
 <blockquote>
 <p>You have to use this step every time you need to run MariaDB.</p>
 </blockquote>
