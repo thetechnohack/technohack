@@ -5,7 +5,244 @@
     <link>https://thetechnohack.cf/tags/android/</link>
     <description>Recent content in android on The Techno Hack</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 26 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechnohack.cf/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechnohack.cf/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Import *.sql Files in MySQL &#43; Download Sample Tables &amp; Database</title>
+      <link>https://thetechnohack.cf/post/how-to-import-.sql-in-mysql-sample-database-download/</link>
+      <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://thetechnohack.cf/post/how-to-import-.sql-in-mysql-sample-database-download/</guid>
+      <description>
+        
+          &lt;p&gt;In this tutorial we will see how to import .sql (tables or databases) files in MySQL-CLI.&lt;/p&gt;
+&lt;p&gt;MariaDB and MySQL have some differences and similarities although both are commonly known as MySQL. We will use MariaDB as our database management system throughout this tutorial.&lt;/p&gt;
+&lt;p&gt;You can see below how the MySQL and MariaDB prompts look like :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MySQL prompt:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;mysql&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;MariaDB prompt:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;MariaDB [(none)]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;what-is-a-sql-file-&#34;&gt;What is a .sql file ?&lt;/h2&gt;
+&lt;p&gt;The *.sql extension is a file which contains some sql statements like — Create - Select - Insert - View etc. in a proper order to perform the creation of databases and tables. It is also known as &amp;quot;dump&amp;quot; because it is basically a mysql export.&lt;/p&gt;
+&lt;h2 id=&#34;creating-database&#34;&gt;Creating Database&lt;/h2&gt;
+&lt;p&gt;First of all, we have to create a database in which we can import sql tables.&lt;/p&gt;
+&lt;p&gt;Let&#39;s create a database named &amp;quot;&lt;em&gt;test&lt;/em&gt;&amp;quot; using the CREATE DATABASE statement :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;MariaDB [(none)]&amp;gt; CREATE DATABASE test;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Select the &amp;quot;&lt;em&gt;test&lt;/em&gt;&amp;quot; database as the default database using USE statement :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;MariaDB [(none)]&amp;gt; USE test;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h2 id=&#34;importing-sql-sample-tables&#34;&gt;Importing *.sql Sample Tables&lt;/h2&gt;
+&lt;p&gt;We have two sample tables here. We will import them in our &amp;quot;&lt;em&gt;test&lt;/em&gt;&amp;quot; database :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;event table&lt;/li&gt;
+&lt;li&gt;pet table&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;event-table&#34;&gt;Event table&lt;/h3&gt;
+&lt;p&gt;Download and extract the following zip file in your working directory : &lt;a href=&#34;https://github.com/thetechnohack/files/raw/main/mysql%20samples/event-table.zip&#34; class=&#34;buttonDownload&#34;&gt;Download event-table.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can see that there are two files in event-table folder :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;event-table
+&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;├── cr_event_tbl.sql
+&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;└── event.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;But why do we need two separate files ??&lt;/p&gt;
+&lt;p&gt;It is because the sql file here is only containing the table structure and the text file is holding the values for that table structure.
+But it is not necessary to use two different files, we can also hold table structure and values together in a sql file.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;cr_event_tbl.sql&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This file contains the table structure or table format.&lt;/p&gt;
+&lt;p&gt;Import this file using the SOURCE statement as shown below :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;MariaDB [test]&amp;gt; SOURCE cr_event_tbl.sql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It will create an empty table &amp;quot;&lt;em&gt;event&lt;/em&gt;&amp;quot; :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;MariaDB [test]&amp;gt; SHOW TABLES;
+&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;+---------------------+
+&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;| Tables_in_test      |
+&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;+---------------------+
+&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;| event               |
+&lt;span class=&#34;ln&#34;&gt;6&lt;/span&gt;+---------------------+
+&lt;span class=&#34;ln&#34;&gt;7&lt;/span&gt;1 row in set (0.010 sec)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;event.txt&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This file contains the data (values) for event table. We need to load this data in event table.&lt;/p&gt;
+&lt;p&gt;Use the below statement to load the event.txt in event table :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;MariaDB [test]&amp;gt; LOAD DATA LOCAL INFILE &amp;#39;event.txt&amp;#39; INTO TABLE event;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now we have the complete table. You can see the complete table using the SELECT statement:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;MariaDB [test]&amp;gt; SELECT * FROM event;
+&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;+----------+------------+----------+-----------------------------+
+&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;| name     | date       | type     | remark                      |
+&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;+----------+------------+----------+-----------------------------+
+&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;| Fluffy   | 1995-05-15 | litter   | 4 kittens, 3 female, 1 male |
+&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;| Buffy    | 1993-06-23 | litter   | 5 puppies, 2 female, 3 male |
+&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;| Buffy    | 1994-06-19 | litter   | 3 puppies, 3 female         |
+&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;| Chirpy   | 1999-03-21 | vet      | needed beak straightened    |
+&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;| Slim     | 1997-08-03 | vet      | broken rib                  |
+&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;| Bowser   | 1991-10-12 | kennel   | NULL                        |
+&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;| Fang     | 1991-10-12 | kennel   | NULL                        |
+&lt;span class=&#34;ln&#34;&gt;12&lt;/span&gt;| Fang     | 1998-08-28 | birthday | Gave him a new chew toy     |
+&lt;span class=&#34;ln&#34;&gt;13&lt;/span&gt;| Claws    | 1998-03-17 | birthday | Gave him a new flea collar  |
+&lt;span class=&#34;ln&#34;&gt;14&lt;/span&gt;| Whistler | 1998-12-09 | birthday | First birthday              |
+&lt;span class=&#34;ln&#34;&gt;15&lt;/span&gt;+----------+------------+----------+-----------------------------+
+&lt;span class=&#34;ln&#34;&gt;16&lt;/span&gt;10 rows in set (0.012 sec)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;pet-table&#34;&gt;Pet table&lt;/h3&gt;
+&lt;p&gt;Download and extract the following zip file in your working directory : &lt;a href=&#34;https://github.com/thetechnohack/files/raw/main/mysql%20samples/pet-table.zip&#34; class=&#34;buttonDownload&#34;&gt;Download pet-table.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Follow the same procedure as we done above.&lt;/p&gt;
+&lt;p&gt;Folder structure of pet-table :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;pet-table
+&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;├── cr_pet_tbl.sql
+&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;└── pet.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;cr_pet_tbl.sql&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Importing &lt;em&gt;cr_pet_tbl.sql&lt;/em&gt; in &amp;quot;&lt;em&gt;test&lt;/em&gt;&amp;quot; database :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;MariaDB [test]&amp;gt; SOURCE cr_pet_tbl.sql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will create a new empty table as name &amp;quot;&lt;em&gt;pet&lt;/em&gt;&amp;quot; :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;MariaDB [test]&amp;gt; SHOW TABLES;
+&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;+---------------------+
+&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;| Tables_in_test      |
+&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;+---------------------+
+&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;| event               |
+&lt;span class=&#34;ln&#34;&gt;6&lt;/span&gt;| pet                 |
+&lt;span class=&#34;ln&#34;&gt;7&lt;/span&gt;+---------------------+
+&lt;span class=&#34;ln&#34;&gt;8&lt;/span&gt;2 rows in set (0.010 sec)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;pet.txt&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Load data form pet.txt in pet table :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;MariaDB [test]&amp;gt; LOAD DATA LOCAL INFILE &amp;#39;pet.txt&amp;#39; INTO TABLE pet;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Print the entire table using SELECT statement :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;MariaDB [test]&amp;gt; SELECT * FROM pet;
+&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;+----------+--------+---------+------+------------+------------+
+&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;| name     | owner  | species | sex  | birth      | death      |
+&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;+----------+--------+---------+------+------------+------------+
+&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;| Fluffy   | Harold | cat     | f    | 1993-02-04 | NULL       |
+&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;| Claws    | Gwen   | cat     | m    | 1994-03-17 | NULL       |
+&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;| Buffy    | Harold | dog     | f    | 1989-05-13 | NULL       |
+&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;| Fang     | Benny  | dog     | m    | 1990-08-27 | NULL       |
+&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;| Bowser   | Diane  | dog     | m    | 1979-08-31 | 1995-07-29 |
+&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;| Chirpy   | Gwen   | bird    | f    | 1998-09-11 | NULL       |
+&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;| Whistler | Gwen   | bird    | NULL | 1997-12-09 | NULL       |
+&lt;span class=&#34;ln&#34;&gt;12&lt;/span&gt;| Slim     | Benny  | snake   | m    | 1996-04-29 | NULL       |
+&lt;span class=&#34;ln&#34;&gt;13&lt;/span&gt;+----------+--------+---------+------+------------+------------+
+&lt;span class=&#34;ln&#34;&gt;14&lt;/span&gt;8 rows in set (0.011 sec)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;importing-sample-sql-database&#34;&gt;Importing Sample .sql database&lt;/h2&gt;
+&lt;p&gt;Here, we have a .sql database dump, which means you don&#39;t need to create an empty table first and then import data into it. It will automatically create a database with some sample tables in it.&lt;/p&gt;
+&lt;p&gt;Download and extract the following zip file in your working directory : &lt;a href=&#34;https://github.com/thetechnohack/files/raw/main/mysql%20samples/mydb.zip&#34; class=&#34;buttonDownload&#34;&gt;Download database&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now just use the SOURCE statement :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;MariaDB [(none)]&amp;gt; SOURCE mysqlsampledatabase.sql;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It will create a database, &lt;strong&gt;classicmodels&lt;/strong&gt; with some tables in it.&lt;/p&gt;
+&lt;p&gt;Select the &lt;strong&gt;classicmodels&lt;/strong&gt; as default database :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;MariaDB [(none)]&amp;gt; USE classicmodels;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There are different tables for practicing MySQL statements :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;MariaDB [classicmodels]&amp;gt; SHOW TABLES;
+&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;+-------------------------+
+&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;| Tables_in_classicmodels |
+&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;+-------------------------+
+&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;| customers               |
+&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;| employees               |
+&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;| offices                 |
+&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;| orderdetails            |
+&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;| orders                  |
+&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;| payments                |
+&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;| productlines            |
+&lt;span class=&#34;ln&#34;&gt;12&lt;/span&gt;| products                |
+&lt;span class=&#34;ln&#34;&gt;13&lt;/span&gt;+-------------------------+
+&lt;span class=&#34;ln&#34;&gt;14&lt;/span&gt;8 rows in set (0.001 sec)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hope you liked this tutorial.
+Comment your suggestions and queries. &lt;strong&gt;We always appreciate your feedback 😊&lt;/strong&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;style&gt;
+.buttonDownload {
+	display: inline-block;
+	position: relative;
+	padding: 10px 25px;
+   background-color: #4CC713;
+   color: white;
+   font-family: sans-serif;
+	text-decoration: none;
+	font-size: 0.9em;
+	text-align: center;
+	text-indent: 15px;
+   border-radius: 8px;
+   outline: none;
+}
+
+.buttonDownload:hover {
+	background-color: #333;
+	color: white;
+}
+
+.buttonDownload:before, .buttonDownload:after {
+	content: &#39; &#39;;
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 52%;
+}
+
+/* Download box shape  */
+.buttonDownload:before {
+	width: 10px;
+	height: 2px;
+	border-style: solid;
+	border-width: 0 2px 2px;
+}
+
+/* Download arrow shape */
+.buttonDownload:after {
+	width: 0;
+	height: 0;
+	margin-left: 3px;
+	margin-top: -7px;
+  
+	border-style: solid;
+	border-width: 4px 4px 0 4px;
+	border-color: transparent;
+	border-top-color: inherit;
+	
+	animation: downloadArrow 2s linear infinite;
+	animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+	border-color: #4CC713;
+}
+
+.buttonDownload:hover:after {
+	border-top-color: #4CC713;
+	animation-play-state: running;
+}
+
+/* keyframes for the download icon anim */
+@keyframes downloadArrow {
+	/* 0% and 0.001% keyframes used as a hackish way of having the button frozen on a nice looking frame by default */
+	0% {
+		margin-top: -7px;
+		opacity: 1;
+	}
+	
+	0.001% {
+		margin-top: -15px;
+		opacity: 0;
+	}
+	
+	50% {
+		opacity: 1;
+	}
+	
+	100% {
+		margin-top: 0;
+		opacity: 0;
+	}
+}
+&lt;/style&gt;
+
+        
+      </description>
+    </item>
+    
     <item>
       <title>How to Install MySQL Server and Client on Android</title>
       <link>https://thetechnohack.cf/post/how-to-install-mysql-server-and-client-on-android/</link>

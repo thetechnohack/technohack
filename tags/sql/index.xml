@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mariadb on The Techno Hack</title>
-    <link>https://thetechnohack.cf/tags/mariadb/</link>
-    <description>Recent content in mariadb on The Techno Hack</description>
+    <title>sql on The Techno Hack</title>
+    <link>https://thetechnohack.cf/tags/sql/</link>
+    <description>Recent content in sql on The Techno Hack</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechnohack.cf/tags/mariadb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://thetechnohack.cf/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Import *.sql Files in MySQL &#43; Download Sample Tables &amp; Database</title>
       <link>https://thetechnohack.cf/post/how-to-import-.sql-in-mysql-sample-database-download/</link>
@@ -238,96 +238,6 @@ Comment your suggestions and queries. &lt;strong&gt;We always appreciate your fe
 	}
 }
 &lt;/style&gt;
-
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>How to Install MySQL Server and Client on Android</title>
-      <link>https://thetechnohack.cf/post/how-to-install-mysql-server-and-client-on-android/</link>
-      <pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://thetechnohack.cf/post/how-to-install-mysql-server-and-client-on-android/</guid>
-      <description>
-        
-          &lt;p&gt;If you are still stucked in installation of MySQL (MariaDB) on your android — don&#39;t worry we have a quick and best solution for that.&lt;/p&gt;
-&lt;p&gt;We have already done a tutorial on this topic : &lt;a href=&#34;https://thetechnohack.cf/post/how-to-install-mysql-on-android-with-termux/&#34;&gt;How to Install MySQL (MariaDB) on Android With Termux&lt;/a&gt; &lt;br&gt;
-But this tutorial on how to install mysql is going to be far more easy and straightforward than our old tutorial.&lt;/p&gt;
-&lt;p&gt;We made a simple tool (bash scripting) to solve this problem, which automates all the processes and you only need to use some easy instructions commands.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;NOTE :&lt;/strong&gt; This only works for android devices as termux is only available for android.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Install Termux App (&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.termux&#34;&gt;Click Here&lt;/a&gt;)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Open Termux Application&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Copy &amp;amp; Paste The Below Command :&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;apt update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt upgrade&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; pkg install wget&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ..&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; wget -O mysql.tar.gz &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://github.com/sumit-buddy/mysql-for-termux-android/archive/v1.0.tar.gz&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; tar -xzf mysql.tar.gz -C home --strip-components &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; rm mysql.tar.gz &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; home &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; rm -r images &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; rm README.md&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; chmod u+x installer.sh&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; ./installer.sh&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/../usr/etc/bash.bashrc&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; rm installer.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;
-&lt;p&gt;Now the installation will begin. &lt;br&gt;
-(&lt;strong&gt;Please be patient as this may take some time depending on your internet speed&lt;/strong&gt;)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;You will be asked to answer
-&lt;ins&gt;&lt;code&gt;Do you want to continue? [Y/n]&lt;/code&gt;&lt;/ins&gt;
-upto three times. Each time type in &#39;&lt;em&gt;y&lt;/em&gt;&#39; and press enter.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;After that, the following pop-up will appear. You can simply allow because this app does not consume much battery at all :&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/sumit-buddy/mysql-for-termux-android/master/images/stop-optimizing-battery-usage.jpg#image&#34; alt=&#34;stop optimizing battery usage?&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;7&#34;&gt;
-&lt;li&gt;When the entire installation process is completed, a text saying &amp;quot;&lt;strong&gt;MySQL installed successfully&lt;/strong&gt;&amp;quot; should appear. &lt;br&gt;
-Now, the MySQL server has started on your machine and you are all set to use MySQL.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;commands&#34;&gt;Commands&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;ins&gt;start-server&lt;/ins&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;start-server
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run this command to start MySQL server. (&lt;strong&gt;First time during installation the server starts by default, so no need to run there&lt;/strong&gt;)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;ins&gt;setpass&lt;/ins&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;setpass
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Use this command to set a password for the user. (&lt;strong&gt;This can only be done while the server is running.&lt;/strong&gt;)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;ins&gt;start-client&lt;/ins&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;start-client
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run this command to start the MySQL client.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;ins&gt;stop-server&lt;/ins&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;stop-server
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Use this command to stop MySQL server (daemon). &lt;br&gt;
-&lt;strong&gt;Must use this command to stop MySQL server after exiting mariadb, otherwise when you try to start the server again you will get the error : &lt;code&gt;Error 2002 (HY000)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;troubleshooting-errors&#34;&gt;Troubleshooting Errors&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;If you get any errors during or after installation, you can check the log file using the command:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;cat logs.log
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;If you get the following error — use the command &lt;code&gt;stop-server&lt;/code&gt; and then restart using &lt;code&gt;start-server&lt;/code&gt; command :&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;Error &lt;span class=&#34;m&#34;&gt;2002&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;HY000&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: Can&lt;span class=&#34;s1&#34;&gt;&amp;#39;t connect to local MySQL server through the socket &amp;#39;&lt;/span&gt;/data/data/com.termux/files/usr/tmp/mysqld.sock&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;111&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you&#39;re still finding it difficult or having some error, you can send a screenshot of your error and ask for help...&lt;/p&gt;
-&lt;style&gt;
-img[src$=&#34;#image&#34;] {
-  border-radius: 10px;
-}
-&lt;/style&gt;
-&lt;br&gt;
 
         
       </description>
