@@ -1,18 +1,18 @@
 {
 	"version": 3,
 	"file": "styles.css",
-	"sourceRoot": "/storage/emulated/0/web-site/technohack",
+	"sourceRoot": "/sdcard/web-site/technohack",
 	"sources": [
 		"themes/hugo-clarity/assets/sass/main.sass",
-		"themes/hugo-clarity/assets/sass/_variables.sass",
-		"themes/hugo-clarity/assets/sass/_override.sass",
-		"themes/hugo-clarity/assets/sass/_fonts.sass",
-		"themes/hugo-clarity/assets/sass/_base.sass",
-		"themes/hugo-clarity/assets/sass/_components.sass",
-		"themes/hugo-clarity/assets/sass/_utils.sass",
-		"themes/hugo-clarity/assets/sass/_mobile.sass",
-		"themes/hugo-clarity/assets/sass/_syntax.sass",
-		"themes/hugo-clarity/assets/sass/_custom.sass"
+		"../../../../../sdcard/web-site/technohack/themes/hugo-clarity/assets/sass/_variables.sass",
+		"../../../../../sdcard/web-site/technohack/themes/hugo-clarity/assets/sass/_override.sass",
+		"../../../../../sdcard/web-site/technohack/themes/hugo-clarity/assets/sass/_fonts.sass",
+		"../../../../../sdcard/web-site/technohack/themes/hugo-clarity/assets/sass/_base.sass",
+		"../../../../../sdcard/web-site/technohack/themes/hugo-clarity/assets/sass/_components.sass",
+		"../../../../../sdcard/web-site/technohack/themes/hugo-clarity/assets/sass/_utils.sass",
+		"../../../../../sdcard/web-site/technohack/themes/hugo-clarity/assets/sass/_mobile.sass",
+		"../../../../../sdcard/web-site/technohack/themes/hugo-clarity/assets/sass/_syntax.sass",
+		"../../../../../sdcard/web-site/technohack/themes/hugo-clarity/assets/sass/_custom.sass"
 	],
 	"sourcesContent": [
 		"@import 'variables';\n@import 'override';\n@import 'fonts';\n@import 'base';\n@import 'components';\n@import 'utils';\n@import 'mobile';\n@import 'syntax';\n@import 'custom';\n",
