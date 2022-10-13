@@ -1,0 +1,68 @@
+backend:
+  name: git-gateway
+  branch: main
+publish_mode: editorial_workflow
+media_folder: "static/images" # Folder where user uploaded files should go
+public_folder: "images"
+collections:
+  - name: "posts" # Used in routes, e.g., /admin/collections/post
+    label: "Posts" # Used in the UI
+    folder: "content/posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "authors", widget: "list" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - {
+          label: "Categories",
+          name: "categories",
+          widget: "list",
+          required: false,
+        }
+      - {
+          label: "Cover Image",
+          name: "cover",
+          widget: "image",
+          choose_url: true,
+          default: "/images/placeholder.jpg",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/about.md"
+        label: "About"
+        name: "about"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "content/categories.md"
+        label: "Categories"
+        name: "categories"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "content/tags.md"
+        label: "Tags"
+        name: "tags"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "content/links.md"
+        label: "Links"
+        name: "links"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
