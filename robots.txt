@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://thetechnohack.cf/index.xml
+Sitemap: https://thetechnohack.cf/sitemap.xml
